@@ -20,37 +20,21 @@ instructions. While you will definitely have a significant amount of freedom in
 how you implement the features, be sure to carefully read the directions for
 setting up the application.
 
-## Setup
+## Project Setup
 
-After unbundling the project:
+Once you have the plan in place for the application you want to build take the following steps:
 
-1. Run `npm install` in your terminal.
-2. Run `npm run server`. This will run your backend on port `8002`.
-3. In a new terminal, run `npm start`. This will run your React app on port `8000`.
+- Create a new project folder.
+- Create a new GitHub repository. (NB: ENSURE IT IS PRIVATE).
+- Add your TM as a contributor to the project. (This is only for grading purposes. We promise we won't steal your code)
+- Please make sure you regularly commit to the repository.
+- In your project directory, create a db.json file and use this dataLinks to an external site. for your server DB.
+- Run this command to get the backend started:
+json-server --watch db.json
 
-Make sure to open [http://localhost:8002/bots](http://localhost:8002/bots) in
-the browser to verify that your backend is working before you proceed!
+Test your server by visiting this route in the browser:
+http://localhost:8001/bots
 
-The base URL for your backend is: `http://localhost:8002`
-
-## What You Already Have
-
-`BotPage` is the highest component below App, and serves as the main container
-for all of the pieces of the page.
-
-`BotCollection` and `YourBotArmy` are container components, which are children
-of `BotPage`. `BotCollection` is where all the bots will be displayed, while
-`YourBotArmy` (the green portion on the top of the screen) will only display the
-bots that have been selected by the user.
-
-`BotCard` and `BotSpecs` are presentational components that have been provided
-for you that will render out information about an individual bot formatted for a
-list view and for a full view, respectively. They are pre-styled, and it is your
-responsibility to get the data into them.
-
-All of the code to style the page has been written for you, meaning that you
-should be adding to the code rather than editing it; however, if your finished
-product has some styling issues, don't worry too much about it.
 
 ## Core Deliverables
 
