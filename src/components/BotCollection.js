@@ -11,7 +11,9 @@ export default function BotCollection() {
 
   return (
     <div>
-        
+        {bot.map((e) => {
+            console.log(e) 
+        })}
     </div>
   )
 }
