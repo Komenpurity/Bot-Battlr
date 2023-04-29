@@ -11,11 +11,13 @@ export default function BotCollection() {
     },[])
 
   return (
-    <div>
-        {bot.map((e) => {
-            return <BotCard id={e.id} health={e.health} name={e.name}  damage={e.damage}  
-            url={e.avatar_url}  catchphrase={e.catchphrase} created={e.created_at} /> 
-        })}
+    <div className='container'> 
+      <div className='row'> 
+          {bot.map((e) => {
+              return <BotCard id={e.id} name={e.name}  bclass={e.bot_class} damage={e.damage} health={e.health} armor={e.armor}
+              url={e.avatar_url}  catchphrase={e.catchphrase} created={e.created_at} /> 
+          })}
+      </div>
     </div>
   )
 }
