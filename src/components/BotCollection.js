@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function BotCollection() {
-    
+    const [bot,setBot] = useState([])
 
     useEffect(() => {
         fetch("http://localhost:3000/bots")
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => setBot(data))
     },[])
 
   return (
