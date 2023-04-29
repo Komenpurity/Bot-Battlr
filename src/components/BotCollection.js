@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import BotCard from './BotCard'
 
 export default function BotCollection() {
     const [bot,setBot] = useState([])
@@ -12,7 +13,8 @@ export default function BotCollection() {
   return (
     <div>
         {bot.map((e) => {
-            console.log(e) 
+            return <BotCard id={e.id} health={e.health} name={e.name}  damage={e.damage}  
+            url={e.avatar_url}  catchphrase={e.catchphrase} created={e.created_at} /> 
         })}
     </div>
   )
