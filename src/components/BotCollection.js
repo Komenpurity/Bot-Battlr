@@ -4,6 +4,7 @@ import BotArmy from './BotArmy'
 
 export default function BotCollection() {
     const [bot,setBot] = useState([])
+    const[botArmy,setBotArmy] = useState([]) 
 
     useEffect(() => {
         fetch("http://localhost:3000/bots")
@@ -11,16 +12,32 @@ export default function BotCollection() {
         .then(data => setBot(data))
     },[])
 
+    function handleClick(id){
+      fetch(`http://localhost:3000/bots/${id}`)
+      .then(response => response.json())
+      .then(data => addArmy(data))    
+  }
+
+  function addArmy(newItem) {
+      setBotArmy([...botArmy,newItem])
+      //console.log(botArmy) 
+  }
+
   return (
     <div className='container'> 
-    
-      <div className='bot-army'>
-          <BotArmy />
+
+      <div className='row p-3 mb-2 bg-warning text-dark'> 
+          <h2>Bot Army</h2> 
+          {botArmy.map((e) => {
+            return <BotArmy id={e.id} name={e.name}  bclass={e.bot_class} damage={e.damage} health={e.health} armor={e.armor}
+            url={e.avatar_url}  catchphrase={e.catchphrase} created={e.created_at}/> 
+          })}
       </div>
 
       <div className='row'> 
+          <h2>All Bots</h2>
           {bot.map((e) => {
-              return <BotCard id={e.id} name={e.name}  bclass={e.bot_class} damage={e.damage} health={e.health} armor={e.armor}
+              return <BotCard handleClick={handleClick} id={e.id} name={e.name}  bclass={e.bot_class} damage={e.damage} health={e.health} armor={e.armor}
               url={e.avatar_url}  catchphrase={e.catchphrase} created={e.created_at} /> 
           })}
       </div>
