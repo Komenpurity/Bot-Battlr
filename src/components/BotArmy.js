@@ -28,7 +28,7 @@ export default function BotArmy({id,name,url,catchphrase,bclass,damage,health,ar
             </span>
           </div>
         </div>
-        <button onClick={() => handleDelete(id)} class="btn btn-danger">Remove</button>
+        <button onClick={() => handleDelete(id)} className="btn btn-danger">Remove</button>
     </div>
   )
 }

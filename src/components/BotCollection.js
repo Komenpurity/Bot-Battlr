@@ -7,13 +7,13 @@ export default function BotCollection() {
     const[botArmy,setBotArmy] = useState([]) 
 
     useEffect(() => {
-        fetch("http://localhost:3000/bots")
+        fetch("http://localhost:8001/bots")
         .then(response => response.json())
         .then(data => setBot(data))
     },[])
 
     function handleClick(id){
-      fetch(`http://localhost:3000/bots/${id}`)
+      fetch(`http://localhost:8001/bots/${id}`)
       .then(response => response.json())
       .then(data => addArmy(data))    
   }
@@ -24,12 +24,12 @@ export default function BotCollection() {
   }
 
   function handleDelete(id){
-    fetch(`http://localhost:3000/bots/${id}`, {
+    fetch(`http://localhost:8001/bots/${id}`, {  
       method: "DELETE",
     })
       .then((r) => r.json())
       .then((data) => {
-          console.log(data)  
+            console.log(data) 
       });
          
   }

@@ -13,54 +13,6 @@
       "updated_at": "2018-10-02T19:55:10.827Z"
     },
     {
-      "id": 103,
-      "name": "P-24",
-      "health": 88,
-      "damage": 25,
-      "armor": 60,
-      "bot_class": "Witch",
-      "catchphrase": "1100101001110111110010011010110",
-      "avatar_url": "https://robohash.org/idetcumque.png?size=300x300&set=set1",
-      "created_at": "2018-10-02T19:55:10.844Z",
-      "updated_at": "2018-10-02T19:55:10.844Z"
-    },
-    {
-      "id": 108,
-      "name": "m-76",
-      "health": 65,
-      "damage": 90,
-      "armor": 38,
-      "bot_class": "Assault",
-      "catchphrase": "1101111100001011111011011001011110010000",
-      "avatar_url": "https://robohash.org/blanditiisautlaudantium.png?size=300x300&set=set1",
-      "created_at": "2018-10-02T19:55:10.915Z",
-      "updated_at": "2018-10-02T19:55:10.915Z"
-    },
-    {
-      "id": 109,
-      "name": "hjk-40",
-      "health": 75,
-      "damage": 84,
-      "armor": 31,
-      "bot_class": "Witch",
-      "catchphrase": "11010100110000100001110001100000010111101000001100",
-      "avatar_url": "https://robohash.org/quirationerem.png?size=300x300&set=set1",
-      "created_at": "2018-10-02T19:55:10.940Z",
-      "updated_at": "2018-10-02T19:55:10.940Z"
-    },
-    {
-      "id": 111,
-      "name": "ya-81",
-      "health": 56,
-      "damage": 22,
-      "armor": 92,
-      "bot_class": "Defender",
-      "catchphrase": "100000011001011111110100110001010101100111001100",
-      "avatar_url": "https://robohash.org/similiquereprehenderitet.png?size=300x300&set=set1",
-      "created_at": "2018-10-02T19:55:11.017Z",
-      "updated_at": "2018-10-02T19:55:11.017Z"
-    },
-    {
       "id": 112,
       "name": "jDn-31",
       "health": 52,
@@ -145,18 +97,6 @@
       "updated_at": "2018-10-02T19:55:11.162Z"
     },
     {
-      "id": 119,
-      "name": "GQ-40",
-      "health": 78,
-      "damage": 37,
-      "armor": 95,
-      "bot_class": "Defender",
-      "catchphrase": "00010100111100110110111001011111010011001",
-      "avatar_url": "https://robohash.org/repellendusporrosint.png?size=300x300&set=set1",
-      "created_at": "2018-10-02T19:55:11.191Z",
-      "updated_at": "2018-10-02T19:55:11.191Z"
-    },
-    {
       "id": 120,
       "name": "\\-86",
       "health": 56,
@@ -167,18 +107,6 @@
       "avatar_url": "https://robohash.org/ipsamexercitationemrem.png?size=300x300&set=set1",
       "created_at": "2018-10-02T19:55:11.203Z",
       "updated_at": "2018-10-02T19:55:11.203Z"
-    },
-    {
-      "id": 121,
-      "name": "wa-81",
-      "health": 49,
-      "damage": 81,
-      "armor": 39,
-      "bot_class": "Assault",
-      "catchphrase": "1010100000001001101101111100100011000010",
-      "avatar_url": "https://robohash.org/adipisciconsequaturnostrum.png?size=300x300&set=set1",
-      "created_at": "2018-10-02T19:55:11.213Z",
-      "updated_at": "2018-10-02T19:55:11.213Z"
     },
     {
       "id": 122,
