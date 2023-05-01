@@ -23,13 +23,24 @@ export default function BotCollection() {
       //console.log(botArmy) 
   }
 
+  function handleDelete(id){
+    fetch(`http://localhost:3000/bots/${id}`, {
+      method: "DELETE",
+    })
+      .then((r) => r.json())
+      .then((data) => {
+          console.log(data)  
+      });
+         
+  }
+
   return (
     <div className='container'> 
-
+      <h2>Bot Battlr</h2>
       <div className='row p-3 mb-2 bg-warning text-dark'> 
           <h2>Bot Army</h2> 
           {botArmy.map((e) => {
-            return <BotArmy id={e.id} name={e.name}  bclass={e.bot_class} damage={e.damage} health={e.health} armor={e.armor}
+            return <BotArmy handleDelete={handleDelete} id={e.id} name={e.name}  bclass={e.bot_class} damage={e.damage} health={e.health} armor={e.armor}
             url={e.avatar_url}  catchphrase={e.catchphrase} created={e.created_at}/> 
           })}
       </div>

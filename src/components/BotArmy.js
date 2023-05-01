@@ -2,7 +2,7 @@ import React from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faHeartPulse, faBolt, faShieldHalved} from '@fortawesome/free-solid-svg-icons'
 
-export default function BotArmy({id,name,url,catchphrase,bclass,damage,health,armor}) { 
+export default function BotArmy({id,name,url,catchphrase,bclass,damage,health,armor,handleDelete}) { 
 
   return (
     <div key={id} className="card col-2" >    
@@ -28,6 +28,7 @@ export default function BotArmy({id,name,url,catchphrase,bclass,damage,health,ar
             </span>
           </div>
         </div>
+        <button onClick={() => handleDelete(id)} class="btn btn-danger">Remove</button>
     </div>
   )
 }
