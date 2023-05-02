@@ -7,13 +7,13 @@ export default function BotCollection() {
     const[botArmy,setBotArmy] = useState([]) 
 
     useEffect(() => {
-        fetch("http://localhost:8001/bots")
+        fetch("https://api.npoint.io/f2dab3b71d583e4dbdef/bots")
         .then(response => response.json())
         .then(data => setBot(data))
     },[])
 
     function handleClick(id){
-      fetch(`http://localhost:8001/bots/${id}`)
+      fetch(`https://api.npoint.io/f2dab3b71d583e4dbdef/bots/${id}`)
       .then(response => response.json())
       .then(data => addArmy(data))    
   }
@@ -24,7 +24,7 @@ export default function BotCollection() {
   }
 
   function handleDelete(id){
-    fetch(`http://localhost:8001/bots/${id}`, {  
+    fetch(`https://api.npoint.io/f2dab3b71d583e4dbdef/bots/${id}`, {  
       method: "DELETE",
     })
       .then((r) => r.json())
