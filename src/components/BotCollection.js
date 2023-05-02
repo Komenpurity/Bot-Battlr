@@ -7,13 +7,13 @@ export default function BotCollection() {
     const[botArmy,setBotArmy] = useState([]) 
 
     useEffect(() => {
-        fetch("https://api.npoint.io/f2dab3b71d583e4dbdef/bots")
+        fetch("https://vercel1-smoky.vercel.app/bots")
         .then(response => response.json())
         .then(data => setBot(data))
     },[])
 
     function handleClick(id){
-      fetch(`https://api.npoint.io/f2dab3b71d583e4dbdef/bots/${id}`)
+      fetch(`https://vercel1-smoky.vercel.app/bots/${id}`)
       .then(response => response.json())
       .then(data => addArmy(data))    
   }
@@ -24,12 +24,13 @@ export default function BotCollection() {
   }
 
   function handleDelete(id){
-    fetch(`https://api.npoint.io/f2dab3b71d583e4dbdef/bots/${id}`, {  
-      method: "DELETE",
+    fetch(`https://vercel1-smoky.vercel.app/bots/${id}`, {  
+      method: "DELETE"
     })
       .then((r) => r.json())
       .then((data) => {
-            console.log(data) 
+            setBotArmy(botArmy.filter((bot) =>  bot.id !== data.id  ))  
+            console.log(data)
       });
          
   }
