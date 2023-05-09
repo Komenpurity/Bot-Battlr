@@ -7,13 +7,13 @@ export default function BotCollection() {
     const[botArmy,setBotArmy] = useState([]) 
 
     useEffect(() => {
-        fetch("https://vercel1-smoky.vercel.app/bots")
+        fetch("https://bot-battlr-hkhm.onrender.com/bots")
         .then(response => response.json())
         .then(data => setBot(data))
     },[])
 
     function handleClick(id){
-      fetch(`https://vercel1-smoky.vercel.app/bots/${id}`)
+      fetch(`https://bot-battlr-hkhm.onrender.com/bots/${id}`)
       .then(response => response.json())
       .then(data => addArmy(data))    
   }
@@ -24,7 +24,7 @@ export default function BotCollection() {
   }
 
   function handleDelete(id){
-    fetch(`https://vercel1-smoky.vercel.app/bots/${id}`, {  
+    fetch(`https://bot-battlr-hkhm.onrender.com/bots/${id}`, {  
       method: "DELETE"
     })
       .then((r) => r.json())
