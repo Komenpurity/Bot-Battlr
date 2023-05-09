@@ -28,8 +28,9 @@ export default function BotCollection() {
       method: "DELETE"
     })
       .then((r) => r.json())
-      .then((data) => { 
-            console.log(data)
+      .then(() => { 
+            setBot(bot.filter((bo) => bo.id !== id))
+            setBotArmy(botArmy.filter((bo) => bo.id !== id)) 
       });
          
   }
